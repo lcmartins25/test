@@ -1,0 +1,138 @@
+.header {
+   position: fixed;
+   width: 100vw;
+   height: 6.5rem;
+   padding: .5rem 5vw;
+   font-size: $s-size;
+   font-weight: bold;
+   top: 0;
+   z-index: 100;
+   display: flex;
+   justify-content: space-between;
+
+   @media (max-width: $mobile) {
+      height: 5.5rem;
+   }
+
+}
+
+.nav {
+   flex-grow: 1;
+}
+
+.background {
+   background-color: white;
+   transition: all .1s ease;
+}
+
+.header__logo {
+   padding-right: $m-size;
+   font-size: $m-size;
+   color: $light-blue;
+   text-decoration: none;
+   padding: auto 0;
+
+   @media (min-width: $tablet) {
+      padding-right: $xl-size;
+   }
+
+   @media(max-width: $mobile) {
+      font-size: $sm-size;
+      line-height: 5.2rem;
+   }
+}
+
+.header__link {
+   display: none;
+   height: $xl-size;
+   line-height: $xl-size;
+   padding: 0 $s-size;
+   opacity: .8;
+   color: $dark-grey;
+   text-decoration: none;
+   
+   &:hover {
+      color: $light-blue;
+      opacity: 1;
+      transition: all .3s ease;
+   }
+
+   @media (min-width: $tablet) {
+      padding: 0 $m-size;
+      display: inline-block;
+   }
+
+   @media (min-width: $mobile) and (max-width: $tablet) {
+      display: inline-block;
+   }
+}
+
+.search {
+   border: none;
+   border-bottom: 2px solid $dark-grey;
+   font-family: 'PT Sans', sans-serif;
+   width: 10vw;
+   font-size: 1.6rem;
+   margin-top: 1.5rem;
+   background-color: transparent;
+   display: inline;
+
+   @media (min-width: $tablet) {
+      &:focus {
+         width: 15vw;
+         transition: all .3s ease;
+      }
+   } 
+
+   @media (max-width: $mobile) {
+      display: none;
+   }
+}
+
+.mobile {
+   @media (min-width: $mobile) {
+      display: none;
+      width: 0;
+   }
+}
+
+.burger-menu {
+   background-color: transparent;
+   color: $dark-grey;
+   padding: 1rem .5rem;
+   font-size: $sm-size;
+   line-height: $sm-size;
+   cursor: pointer;
+
+   &:hover, &:focus {
+      background-color: transparent;
+   }
+}
+ 
+ /* The container <div> - needed to position the dropdown content */
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ /* Dropdown Content (Hidden by Default) */
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   right: 0;
+   background-color: #f9f9f9;
+   min-width: 50vw;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   padding-bottom: 1rem;
+
+ }
+ 
+ /* Links inside the dropdown */
+ .dropdown-content a, option {
+   color: $dark-grey;
+   text-decoration: none;
+   display: block;
+ }
+
+ 

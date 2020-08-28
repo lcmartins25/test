@@ -1,0 +1,51 @@
+.carousel .slide {
+   background-color: white;
+   text-align: start;
+}
+
+.carousel .slide img {
+   max-height: 78vh !important;
+   max-width: 85vw !important;
+   width: auto;
+}
+
+.carousel img {
+   width: auto;
+}
+
+.slider-container {
+   height: 92vh;
+   display: flex;
+   align-items: center;
+}
+
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+   margin: 0 3vw;
+   content: '';
+   border: solid $dark-grey;
+   border-width: 0 1.5rem 1.5rem 0;
+   display: inline-block;
+   padding: 1.5rem;
+   border-radius: .5rem;
+}
+
+.carousel .control-next.control-arrow:before {
+   transform: rotate(-45deg);
+}
+
+.carousel .control-prev.control-arrow:before {
+   transform: rotate(135deg);
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+   background: transparent;
+}
+
+.carousel .control-dots .dot {
+   background: $dark-grey;
+   box-shadow: none;
+}
+
+.carousel .control-dots .dot.selected {
+   background-color: $light-blue;
+}

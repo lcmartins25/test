@@ -1,0 +1,8 @@
+.home-title {
+   color: black;
+   font-size: $l-size;
+
+   @media (max-width: $mobile) {
+      font-size: $sm-size;
+   }
+}

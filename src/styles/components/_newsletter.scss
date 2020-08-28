@@ -1,0 +1,98 @@
+.newsletter--container {
+   margin-top: 1rem;
+   width: 100%;
+   z-index: 1;
+
+   @media (min-width: $tablet) {
+      margin-top: 4rem;
+   }
+}
+
+.newsletter--field {
+   display: inline;
+   position: relative;
+   background-color: transparent;
+   outline: 0;
+}
+
+.newsletter--field > label {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+   opacity: .8;
+   padding-left: .5rem;
+   line-height: 2rem;
+}
+
+.newsletter--input {
+   width: 35%;
+   position: relative;
+   border: none;
+   font-size: $s-size;
+   background-color: transparent;
+   border-bottom: 2px solid black;
+   padding: 2rem 0 0 .3rem;
+   margin-right: 1rem;
+
+   &:focus, &:-webkit-autofill {
+      transition: all .3s ease;
+      outline: 0;
+      border-bottom: 2px solid $light-blue;
+
+      +label{
+         transform: translate(0, -16px) scale(.75);
+         color: $light-blue;
+      }
+   }
+
+   @media (min-width: $tablet) {
+      width: 40%;
+   }
+
+   @media (max-width: $mobile) {
+      width: 30%;
+      padding: 0 0 0 .5rem;
+      font-size: $xs-size;
+   }
+}
+
+.newsletter--input:not(:placeholder-shown) + label {
+   transform: translate(0, -16px) scale(.75);
+}
+
+.newsletter--input__email {
+   width: 45%;
+
+   @media (min-width: $tablet) {
+      width: 55%;
+   }
+
+   @media (max-width: $mobile) {
+      width: 35%;
+   }
+}
+
+.form-container {
+   display: block;
+   margin-bottom: 8rem;
+}
+ 
+label {
+   font-size: $s-size;
+   transform-origin: top left;
+   transition: all .1s ease-in-out;
+
+   @media (max-width: $mobile) {
+      font-size: $xs-size;
+   }
+}
+
+.button__form {
+   margin-top: 2rem;
+
+   @media (max-width: $mobile) {
+      margin-top: .5rem;
+   }
+}
+

@@ -1,21 +1,37 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import Archive from './components/Archive'
+import Header from './components/Header'
+import HomePage from './components/HomePage'
+import Footer from './components/Footer'
+import Page from './components/Page'
+import SearchPage from './components/SearchPage'
+import Single from './components/Single'
+import SinglePhotos from './components/SinglePhotos'
+import './styles/styles.scss'
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>react-src/src/App.js</code> and save to reload.
-                </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
-        </div>
-    );
+   return (
+      <BrowserRouter>
+         <Header />
+         <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route path='/our-story' component={Page} />
+            <Route exact path='/travel-blog' component={Archive} />
+            <Route path='/travel-blog/:slug' component={Single} />
+            <Route exact path='/photography'>
+               <Archive type={'photos'} />
+            </Route>
+            <Route path='/photography/:slug' component={SinglePhotos} />
+            <Route path='/search' component={SearchPage}></Route>
+            <Route exact path='/not-found' component={SearchPage}></Route>
+            <Route path='*'>
+               <Redirect to="/not-found" />
+            </Route>
+         </Switch>
+         <Footer />
+      </BrowserRouter>
+   );
 }
 
 export default App;

@@ -1,0 +1,147 @@
+.hero--container {
+   height: 100vh;
+   margin-bottom: 5rem;
+   min-height: 70rem;
+   overflow: hidden;
+   position: relative;
+   width: 100vw;
+
+   @media (max-width: $mobile) {
+      height: 55vh;
+      margin-bottom: 1rem;
+      min-height: 40rem; 
+   }
+
+   @media (min-width: $mobile) and (max-width: $tablet) {
+      height: 70vh;
+      margin-bottom: 3rem;
+      min-height: 50rem;  
+   }
+}
+
+.hero--container::after {
+   background: linear-gradient(180deg,rgba(255,255,255,0) 70%,white 100%), 
+               linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+   background: -moz-linear-gradient(180deg,rgba(255,255,255,0) 70%,white 100%), 
+               -moz-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -moz-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+   background: -webkit-linear-gradient(180deg,rgba(255,255,255,0) 70%,white 100%), 
+               -webkit-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -webkit-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+   background: -ms-linear-gradient(180deg,rgba(255,255,255,0) 70%,white 100%), 
+               -ms-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -ms-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+   content: '';
+   left: 0;
+   position: absolute;
+   top: 0;
+   min-height: 100%;
+   min-width: 100%;
+   z-index: -10;
+
+   @media(max-width: $mobile) {
+      background: linear-gradient(180deg,rgba(255,255,255,0) 45%,white 100%), 
+               linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+      background: -moz-linear-gradient(180deg,rgba(255,255,255,0) 45%,white 100%), 
+               -moz-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -moz-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+      background: -webkit-linear-gradient(180deg,rgba(255,255,255,0) 45%,white 100%), 
+      -webkit-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+      -webkit-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+               background: -ms-linear-gradient(180deg,rgba(255,255,255,0) 45%,white 100%), 
+               -ms-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -ms-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+   }
+}
+
+.hero__page {
+   position: absolute;
+   top: 0;
+   z-index: -10;
+}
+
+.hero__page::after {
+   background: linear-gradient(180deg,rgba(255,255,255,0) 40%,white 80%), 
+               linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+   background: -moz-linear-gradient(180deg,rgba(255,255,255,0) 40%,white 80%), 
+   -moz-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+   -moz-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+               background: -webkit-linear-gradient(180deg,rgba(255,255,255,0) 40%,white 80%), 
+               -webkit-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -webkit-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+               background: -ms-linear-gradient(180deg,rgba(255,255,255,0) 40%,white 80%), 
+               -ms-linear-gradient(54deg,rgba(255,255,255,.6) 35%,rgba(0,0,0,0) 60%),
+               -ms-linear-gradient(180deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 30%);
+}
+
+.hero--content {
+   color: $dark-grey;
+   max-width: 40%;
+   margin: 0 5vw;
+   position: absolute;
+   bottom: 3rem;
+
+   @media (max-width: $mobile) {
+      max-width: 100%;
+      bottom: 1rem;
+   }
+
+   @media (min-width: $mobile) and (max-width: $tablet) {
+      max-width: 50%;
+      bottom: 3rem;
+   }
+}
+
+.hero--container img {
+   left: 50%;
+   min-height: 100%;
+   min-width: 100%;
+   object-fit: cover;
+   position: absolute;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: -100;
+
+   @media (max-width: $mobile) {
+      left: 70%;
+      transform: translate(-70%, -50%);
+   }
+}
+
+.hero--content h1 {
+   font-weight: bold;
+   font-size: $l-size;
+   line-height: $xl-size;   
+
+   @media (max-width: $mobile) {
+      font-size: $s-size;
+      line-height: $sm-size;
+      max-width: 50%;
+   }
+
+   @media (min-width: $mobile) and (max-width: $tablet) {
+      font-size: $m-size;
+      line-height: $m-size;
+   }
+}
+
+.hero--content p {
+   font-size: $m-size;
+   line-height: 3.5rem;
+   margin-bottom: 0;
+
+   @media (max-width: $mobile) {
+      font-size: $xs-size;
+      line-height: $xs-size + .5rem;
+   }
+
+   @media (min-width: $mobile) and (max-width: $tablet) {
+      font-size: $sm-size;
+      line-height: $sm-size;  
+   }
+}
+
+
