@@ -5,7 +5,7 @@ import { closeAllDropdowns, closeDropdownsOnClick } from '../utils/dropdownFunct
 
 const FiltersBar = ({ setCategory }) => {
    const { data: list, error } = useSWR(
-      'http://www.ourglobaltrek.com/wp-json/custom/v1/categories',
+      'https://www.ourglobaltrek.com/wp-json/custom/v1/categories',
       (...args) => axios(...args).then((res) => res.data)
    )
 

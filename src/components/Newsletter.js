@@ -8,7 +8,7 @@ const Newsletter = () => {
 
    const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post('http://www.ourglobaltrek.com/wp-json/newsletter/v1/subscribe', {
+      axios.post('https://www.ourglobaltrek.com/wp-json/newsletter/v1/subscribe', {
          name,
          email
       })

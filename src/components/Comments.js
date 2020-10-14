@@ -5,7 +5,7 @@ import moment from 'moment'
 
 const Comments = ({ id }) => {
    const { data: comments, error } = useSWR(
-      `http://www.ourglobaltrek.com/wp-json/wp/v2/comments?post=${id}`,
+      `https://www.ourglobaltrek.com/wp-json/wp/v2/comments?post=${id}`,
       (...args) => axios(...args).then((res) => res.data)
    )
 
@@ -17,7 +17,7 @@ const Comments = ({ id }) => {
    const handleSubmit = (e) => {
       e.preventDefault()
 
-      axios.post('http://www.ourglobaltrek.com/wp-json/wp/v2/comments', {
+      axios.post('https://www.ourglobaltrek.com/wp-json/wp/v2/comments', {
          post: id,
          author_name: name,
          author_email: email,

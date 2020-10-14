@@ -12,6 +12,7 @@
       name="description"
       content="Travel blog featuring the trips of Julie and Carlos."
     />
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link rel="apple-touch-icon" href="<?php echo $TEMPLATE_PATH; ?>/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -32,6 +33,7 @@
         Learn how to configure a non-root public URL by running `npm run wpbuild`.
     -->
     <title>ourglobaltrek</title>
+    <?php wp_head(); ?>
 </head>
     <body>
     <noscript>

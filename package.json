@@ -20,12 +20,12 @@
    "scripts": {
       "crabuild": "react-scripts build",
       "craeject": "react-scripts eject",
-      "crastart": "react-scripts start",
+      "crastart": "HTTPS=true react-scripts start",
       "cratest": "react-scripts test",
       "build": "wptheme-scripts build",
-      "start": "wptheme-scripts start",
+      "start": "HTTPS=true wptheme-scripts start",
       "wpbuild": "wptheme-scripts wpbuild",
-      "wpstart": "wptheme-scripts wpstart"
+      "wpstart": "HTTPS=true wptheme-scripts wpstart"
    },
    "eslintConfig": {
       "extends": "react-app"
